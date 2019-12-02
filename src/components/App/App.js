@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Route } from 'react-router-dom'
+// import './App.scss'
 
 import AuthenticatedRoute from '../AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from '../AutoDismissAlert/AutoDismissAlert'
@@ -8,6 +9,10 @@ import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
+import Tattoos from '../Tattoos/Tattoos'
+import Tattoo from '../Tattoos/Tattoo'
+import TattooCreate from '../Tattoos/TattooCreate'
+import TattooEdit from '../Tattoos/TattooEdit'
 
 class App extends Component {
   constructor () {
@@ -53,6 +58,21 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword alert={this.alert} user={user} />
+          )} />
+          <Route exact path='/' render={() => (
+            <Tattoos alert={this.alert} />
+          )} />
+          < AuthenticatedRoute exact path='/my-tattoos' render={() => (
+            <Tattoos alert={this.alert} user={user} />
+          )} />
+          <Route exact path='/tattoos/:id' render={() => (
+            <Tattoo alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/create-tattoo' render={() => (
+            <TattooCreate alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/tattoos/:id/edit' render={() => (
+            <TattooEdit alert={this.alert} user={user} />
           )} />
         </main>
       </Fragment>
