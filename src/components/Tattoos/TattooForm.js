@@ -30,12 +30,12 @@ const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
       onChange={handleChange}
     />
 
-    <label htmlFor="date">Date:</label>
+    <label htmlFor="day">Date:</label>
     <input
-      id="date"
-      placeholder="YYYY/MM/DD"
-      value={tattoo.date}
-      name="date"
+      id="day"
+      placeholder="YYYY-MM-DD"
+      value={tattoo.day}
+      name="day"
       onChange={handleChange}
     />
 

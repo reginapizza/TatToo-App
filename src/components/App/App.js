@@ -5,6 +5,7 @@ import { Route } from 'react-router-dom'
 import AuthenticatedRoute from '../AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from '../AutoDismissAlert/AutoDismissAlert'
 import Header from '../Header/Header'
+import LandingPage from '../LandingPage/LandingPage'
 import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
@@ -60,12 +61,15 @@ class App extends Component {
             <ChangePassword alert={this.alert} user={user} />
           )} />
           <Route exact path='/' render={() => (
-            <Tattoos alert={this.alert} />
+            <LandingPage />
           )} />
-          < AuthenticatedRoute exact path='/my-tattoos' render={() => (
+          <AuthenticatedRoute exact path='/tattoos' render={() => (
             <Tattoos alert={this.alert} user={user} />
           )} />
-          <Route exact path='/tattoos/:id' render={() => (
+          <AuthenticatedRoute exact path='/my-tattoos' render={() => (
+            <Tattoos alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute exact path='/tattoos/:id' render={() => (
             <Tattoo alert={this.alert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/create-tattoo' render={() => (

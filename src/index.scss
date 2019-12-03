@@ -1,5 +1,59 @@
 @import '~bootstrap/scss/bootstrap';
+@font-face {
+  font-family: 'Nickainley';
+  src: local('Nickainley'), url(./Fonts/Nickainley.ttf) format('truetype');
+}
 
 body {
   background-color: #260108;
+}
+
+.navbar {
+  background-color: #8C0327 !important;
+  border: 5px solid #F23D4C;
+  color: #F29191;
+  font-family: Nickainley;
+  font-size: 20px;
+  justify-content: center;
+}
+
+.navtitle {
+  float: right;
+  font-size: 50px;
+  justify-content: center;
+}
+
+.auth-buttons {
+  background-color: #8C0327;
+  border: 5px solid #F23D4C;
+  border-radius: 25px;
+  color: #F29191;
+  font-family: Nickainley;
+  font-size: 30px;
+  justify-content: center;
+  margin: 35px;
+  padding: 10px;
+  width: 200px;
+  &:hover {
+    background-color: #F29191;
+    border: 5px solid #F23D4C;
+    color: #8C0327;
+  }
+}
+
+.auth {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.slogan {
+  display: flex;
+  justify-content: center;
 }

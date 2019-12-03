@@ -6,7 +6,7 @@ import apiUrl from '../../apiConfig'
 import TattooForm from './TattooForm'
 
 const TattooEdit = (props) => {
-  const [tattoo, setTattoo] = useState({ title: '', picture: '', description: '', date: '', artist_name: '', artist_instagram: '', location: '', ink_brand: '' })
+  const [tattoo, setTattoo] = useState({ title: '', picture: '', description: '', day: '', artist_name: '', artist_instagram: '', location: '', ink_brand: '' })
   const [updated, setUpdated] = useState(false)
 
   useEffect(() => {

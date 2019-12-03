@@ -41,7 +41,7 @@ const Tattoo = props => {
       <Fragment>
         <h2>{tattoo.title}</h2>
         <p>{tattoo.description}</p>
-        <p>Date: {tattoo.date}</p>
+        <p>Date: {tattoo.day}</p>
         <p>Artist Name: <a href={tattoo.artist_instagram}>{tattoo.artist_name}</a></p>
         <p>Tattoo Shop: {tattoo.location}</p>
         <p>Ink Brand: {tattoo.ink_brand}</p>
