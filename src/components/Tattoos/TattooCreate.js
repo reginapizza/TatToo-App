@@ -33,6 +33,7 @@ const TattooCreate = props => {
 
   return (
     <Fragment>
+      <p className="page-headers">Add Your Tattoo</p>
       <TattooForm
         tattoo={tattoo}
         handleChange={handleChange}

@@ -1,4 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
+@import url("https://use.typekit.net/kot8atv.css");
 @font-face {
   font-family: 'Nickainley';
   src: local('Nickainley'), url(./Fonts/Nickainley.ttf) format('truetype');
@@ -8,28 +9,15 @@ body {
   background-color: #260108;
 }
 
-.navbar {
-  background-color: #8C0327 !important;
-  border: 5px solid #F23D4C;
-  color: #F29191;
-  font-family: Nickainley;
-  font-size: 20px;
-  justify-content: center;
-}
-
-.navtitle {
-  float: right;
-  font-size: 50px;
-  justify-content: center;
-}
-
 .auth-buttons {
   background-color: #8C0327;
   border: 5px solid #F23D4C;
   border-radius: 25px;
   color: #F29191;
-  font-family: Nickainley;
+  font-family: house-script, sans-serif;
   font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
   justify-content: center;
   margin: 35px;
   padding: 10px;
@@ -48,12 +36,115 @@ body {
   align-items: center;
 }
 
-.title {
+.auth-title {
+  align-items: center;
+  display: flex;
+  font-family: house-script, sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  height: 30%;
+  justify-content: center;
+}
+
+.form {
+  background: #513339;
+  color: #F29191;
+  font-family: house-script, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.icons {
+  background-color: white;
+}
+
+.navbar {
+  background-color: #8C0327 !important;
+  border: 5px solid #F23D4C;
+  color: #F29191;
+  font-family: Nickainley;
+  font-size: 20px;
+  justify-content: center;
+}
+
+.nav-link {
+  font-family: house-script, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+
+}
+
+.navtitle {
+  float: right;
+  font-size: 60px;
+  justify-content: center;
+}
+
+.options {
+  padding: 30px;
+}
+
+.page-headers {
+  align-items: center;
+  color: #F29191;
+  display: flex;
+  font-family: house-script, sans-serif;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 400;
+  justify-content: center;
+  margin: 20px;
+}
+
+.slogan {
   display: flex;
   justify-content: center;
 }
 
-.slogan {
+.sign-in,
+.sign-up,
+.change-password {
+  color: #F29191;
+  font-family: house-script, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.submit-button {
+  background-color: #8C0327;
+  border: 2px solid #F23D4C;
+  border-radius: 15px;
+  color: #F29191;
+  font-family: house-script, sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 20px 0px;
+  &:hover {
+    background-color: #F29191;
+    border: 2px solid #F23D4C;
+    color: #8C0327;
+  }
+}
+
+.tattoo-form {
+  font-family: house-script, sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  color: #F29191;
+  clear: both;
+  display: block;
+  width: 100%;
+}
+
+.title {
   display: flex;
   justify-content: center;
 }

@@ -2,79 +2,103 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
-  <form onSubmit={handleSubmit}>
-    <label htmlFor="title">Title</label>
-    <input
-      id="title"
-      placeholder="Your Tattoo Title"
-      value={tattoo.title}
-      name="title"
-      onChange={handleChange}
-    />
+  <form className="tattoo-form" onSubmit={handleSubmit}>
+    <div>
+      <label htmlFor="title">Title</label>
+      <input
+        className="form"
+        id="title"
+        placeholder="Your Tattoo Title"
+        value={tattoo.title}
+        name="title"
+        onChange={handleChange}
+      />
+    </div>
 
-    <label htmlFor="picture">Picture Link:</label>
-    <input
-      id="author"
-      placeholder="Input hpyerlink to an image of your tattoo"
-      value={tattoo.picture}
-      name="picture"
-      onChange={handleChange}
-    />
+    <div>
+      <label htmlFor="picture">Picture Link:</label>
+      <input
+        className="form"
+        id="author"
+        placeholder="Input hpyerlink to an image of your tattoo"
+        value={tattoo.picture}
+        name="picture"
+        onChange={handleChange}
+      />
+    </div>
 
-    <label htmlFor="description">Description:</label>
-    <input
-      id="description"
-      placeholder="English"
-      value={tattoo.description}
-      name="description"
-      onChange={handleChange}
-    />
+    <div>
+      <label htmlFor="description">Description:</label>
+      <input
+        className="form"
+        id="description"
+        placeholder="English"
+        value={tattoo.description}
+        name="description"
+        onChange={handleChange}
+      />
+    </div>
 
-    <label htmlFor="day">Date:</label>
-    <input
-      id="day"
-      placeholder="YYYY-MM-DD"
-      value={tattoo.day}
-      name="day"
-      onChange={handleChange}
-    />
+    <div>
+      <label htmlFor="day">Date:</label>
+      <input
+        className="form"
+        id="day"
+        placeholder="YYYY-MM-DD"
+        value={tattoo.day}
+        name="day"
+        onChange={handleChange}
+      />
+    </div>
 
-    <label htmlFor="artist_name">Artist Name:</label>
-    <input
-      id="artist_name"
-      value={tattoo.artist_name}
-      name="artist_name"
-      onChange={handleChange}
-    />
+    <div>
+      <label htmlFor="artist_name">Artist Name:</label>
+      <input
+        className="form"
+        id="artist_name"
+        value={tattoo.artist_name}
+        name="artist_name"
+        onChange={handleChange}
+      />
+    </div>
 
-    <label htmlFor="artist_instagram">Artist Instagram Handle:</label>
-    <input
-      id="artist_instagram"
-      value={tattoo.artist_instagram}
-      name="artist_instagram"
-      onChange={handleChange}
-    />
+    <div>
+      <label htmlFor="artist_instagram">Artist Instagram Handle:</label>
+      <input
+        className="form"
+        id="artist_instagram"
+        value={tattoo.artist_instagram}
+        name="artist_instagram"
+        onChange={handleChange}
+      />
+    </div>
 
-    <label htmlFor="location">Tattoo Shop:</label>
-    <input
-      id="artist_instagram"
-      placeholder="Start typing to search for your tattoo shop"
-      value={tattoo.location}
-      name="location"
-      onChange={handleChange}
-    />
+    <div>
+      <label htmlFor="location">Tattoo Shop:</label>
+      <input
+        className="form"
+        id="artist_instagram"
+        placeholder="Start typing to search for your tattoo shop"
+        value={tattoo.location}
+        name="location"
+        onChange={handleChange}
+      />
+    </div>
 
-    <label htmlFor="location">Ink Brand:</label>
-    <input
-      id="ink_brand"
-      value={tattoo.ink_brand}
-      name="ink_brand"
-      onChange={handleChange}
-    />
+    <div>
+      <label htmlFor="location">Ink Brand:</label>
+      <input
+        className="form"
+        id="ink_brand"
+        value={tattoo.ink_brand}
+        name="ink_brand"
+        onChange={handleChange}
+      />
+    </div>
 
-    <button className="btn btn-success" type="submit">Create my tattoo!</button>
+    <button className="submit-button" type="submit">Create my tattoo!</button>
     <Link to={cancelPath}>
-      <button className="btn btn-danger">Cancel</button>
+      <button className="submit-button">Cancel</button>
     </Link>
   </form>
 )

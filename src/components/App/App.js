@@ -14,6 +14,7 @@ import Tattoos from '../Tattoos/Tattoos'
 import Tattoo from '../Tattoos/Tattoo'
 import TattooCreate from '../Tattoos/TattooCreate'
 import TattooEdit from '../Tattoos/TattooEdit'
+import MyTattoos from '../Tattoos/MyTattoos'
 
 class App extends Component {
   constructor () {
@@ -63,13 +64,13 @@ class App extends Component {
           <Route exact path='/' render={() => (
             <LandingPage />
           )} />
-          <AuthenticatedRoute exact path='/tattoos' render={() => (
+          <AuthenticatedRoute user={user} exact path='/tattoos' render={() => (
             <Tattoos alert={this.alert} user={user} />
           )} />
-          <AuthenticatedRoute exact path='/my-tattoos' render={() => (
-            <Tattoos alert={this.alert} user={user} />
+          <AuthenticatedRoute user={user} path='/my-tattoos' render={() => (
+            <MyTattoos alert={this.alert} user={user} />
           )} />
-          <AuthenticatedRoute exact path='/tattoos/:id' render={() => (
+          <AuthenticatedRoute user={user} exact path='/tattoos/:id' render={() => (
             <Tattoo alert={this.alert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/create-tattoo' render={() => (

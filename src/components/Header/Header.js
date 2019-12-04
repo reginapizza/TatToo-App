@@ -1,14 +1,21 @@
 import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
+import Icon from '@mdi/react'
+import { mdiAccount, mdiPlus, mdiLogout } from '@mdi/js'
 // import LandingPage from '../LandingPage/LandingPage'
 
 const authenticatedOptions = (
-  <Fragment>
-    <Nav.Link href="#change-password">Change Password</Nav.Link>
-    <Nav.Link href="#sign-out">Sign Out</Nav.Link>
-    <Nav.Link href="#my-tattoos">My Tattoos</Nav.Link>
-    <Nav.Link href="#create-tattoo">New Tattoo</Nav.Link>
+  <Fragment className="options">
+    <Nav.Link href="#create-tattoo"><Icon path={mdiPlus} title="Add A Tattoo"
+      size={2}
+      color="white"/></Nav.Link>
+    <Nav.Link href="#my-tattoos"><Icon path={mdiAccount} title="User Profile"
+      size={2}
+      color="white"/></Nav.Link>
+    <Nav.Link href="#sign-out"><Icon path={mdiLogout} title="Sign Out"
+      size={2}
+      color="white"/></Nav.Link>
   </Fragment>
 )
 
@@ -19,23 +26,16 @@ const unauthenticatedOptions = (
   </Fragment>
 )
 
-const alwaysOptions = (
-  <div>
-    <Nav.Link to="/">Home</Nav.Link>
-  </div>
-)
-
 const Header = ({ user }) => {
   if (user) {
     return (
       <Navbar className= "navbar" bg="primary" variant="dark" expand="md">
-        <Navbar.Brand className="navtitle" href="#">
+        <Navbar.Brand className="navtitle" href="#tattoos">
           Tat, Too
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            { alwaysOptions }
             { user ? authenticatedOptions : unauthenticatedOptions }
           </Nav>
         </Navbar.Collapse>

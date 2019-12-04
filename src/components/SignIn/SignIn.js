@@ -33,7 +33,10 @@ class SignIn extends Component {
         message: messages.signInSuccess,
         variant: 'success'
       }))
-      .then(() => history.push('/'))
+      .then(() => history.push({
+        pathname: '/tattoos',
+        state: {}
+      }))
       .catch(error => {
         console.error(error)
         this.setState({ email: '', password: '' })
@@ -49,14 +52,15 @@ class SignIn extends Component {
     const { email, password } = this.state
 
     return (
-      <div className="row">
+      <div className="row sign-in">
         <div className="col-sm-10 col-md-8 mx-auto mt-5">
-          <h3>Sign In</h3>
+          <h3 className="auth-title">Sign In</h3>
           <Form onSubmit={this.onSignIn}>
             <Form.Group controlId="email">
               <Form.Label>Email address</Form.Label>
               <Form.Control
                 required
+                className="form"
                 type="email"
                 name="email"
                 value={email}
@@ -68,6 +72,7 @@ class SignIn extends Component {
               <Form.Label>Password</Form.Label>
               <Form.Control
                 required
+                className="form"
                 name="password"
                 value={password}
                 type="password"
@@ -78,6 +83,7 @@ class SignIn extends Component {
             <Button
               variant="primary"
               type="submit"
+              className="submit-button"
             >
               Submit
             </Button>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import Button from 'react-bootstrap/Button'
 import ListGroup from 'react-bootstrap/ListGroup'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
@@ -8,7 +8,13 @@ const Tattoos = props => {
   const [tattoos, setTattoos] = useState([])
 
   useEffect(() => {
-    axios(`${apiUrl}/tattoos`)
+    axios({
+      url: `${apiUrl}/my_tattoos`,
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${props.user.token}`
+      }
+    })
       .then(response => {
         setTattoos(response.data.tattoos.reverse())
       })
@@ -30,8 +36,11 @@ const Tattoos = props => {
     <div className='row'>
       <div className='col'>
         <div>
-          <h1>Tattoos:</h1>
-          {props.user && <Link to="/create-tattoo">Add your own Tattoo!</Link>}
+          <div className="page-headers">
+            <p> My Tattoos</p>
+            {props.user && <Button href="/create-tattoo">Add your own tattoo!</Button>}
+            <Button href="#change-password">Change Password</Button>
+          </div>
         </div>
         <ListGroup>
           {tattoosJsx}
