@@ -15,6 +15,8 @@ const TattooEdit = (props) => {
       .catch(console.error)
   }, [])
 
+  console.log(props)
+
   const handleChange = event => {
     event.persist()
     setTattoo(tattoo => ({ ...tattoo, [event.target.name]: event.target.value }))

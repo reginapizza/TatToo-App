@@ -2,15 +2,21 @@ import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Icon from '@mdi/react'
-import { mdiAccount, mdiPlus, mdiLogout } from '@mdi/js'
+import { mdiAccount, mdiPlus, mdiLogout, mdiHelp, mdiHome } from '@mdi/js'
 // import LandingPage from '../LandingPage/LandingPage'
 
 const authenticatedOptions = (
   <Fragment className="options">
+    <Nav.Link href="#tattoos"><Icon path={mdiHome} title="Home"
+      size={2}
+      color="white"/></Nav.Link>
     <Nav.Link href="#create-tattoo"><Icon path={mdiPlus} title="Add A Tattoo"
       size={2}
       color="white"/></Nav.Link>
     <Nav.Link href="#my-tattoos"><Icon path={mdiAccount} title="User Profile"
+      size={2}
+      color="white"/></Nav.Link>
+    <Nav.Link href="#about"><Icon path={mdiHelp} title="About"
       size={2}
       color="white"/></Nav.Link>
     <Nav.Link href="#sign-out"><Icon path={mdiLogout} title="Sign Out"

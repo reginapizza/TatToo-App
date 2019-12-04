@@ -26,9 +26,14 @@ const Tattoos = props => {
       key={tattoo.id}
       action
       href={`#tattoos/${tattoo.id}`}
+      className="container-fluid tattoo-teaser"
     >
-      {tattoo.title}
-      {tattoo.picture}
+      <div className="row">
+        {tattoo.title}
+      </div>
+      <div className="row">
+        {<img src={tattoo.picture} alt={'Tattoo of ' + tattoo.title} height="350" width="350"></img>}
+      </div>
     </ListGroup.Item>
   ))
 

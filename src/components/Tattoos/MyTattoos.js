@@ -27,9 +27,14 @@ const Tattoos = props => {
       key={tattoo.id}
       action
       href={`#tattoos/${tattoo.id}`}
+      className="container-fluid tattoo-teaser"
     >
-      {tattoo.title}
-      {tattoo.picture}
+      <div className="row">
+        {tattoo.title}
+      </div>
+      <div className="row">
+        {<img src={tattoo.picture} alt={'Tattoo of ' + tattoo.title} height="350" width="350"></img>}
+      </div>
     </ListGroup.Item>
   ))
 
@@ -39,8 +44,9 @@ const Tattoos = props => {
         <div>
           <div className="page-headers">
             <p> My Tattoos</p>
-            {props.user && <Button href="/create-tattoo">Add your own tattoo!</Button>}
-            <Button href="#change-password">Change Password</Button>
+            <span className="profile-buttons">{props.user && <Button href="/create-tattoo">Add your own tattoo!</Button>}
+              <Button href="#change-password">Change Password</Button>
+            </span>
           </div>
         </div>
         <ListGroup>

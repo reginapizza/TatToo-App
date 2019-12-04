@@ -32,7 +32,6 @@ const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
       <input
         className="form"
         id="description"
-        placeholder="English"
         value={tattoo.description}
         name="description"
         onChange={handleChange}
@@ -78,7 +77,6 @@ const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
       <input
         className="form"
         id="artist_instagram"
-        placeholder="Start typing to search for your tattoo shop"
         value={tattoo.location}
         name="location"
         onChange={handleChange}

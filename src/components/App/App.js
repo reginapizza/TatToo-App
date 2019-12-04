@@ -15,6 +15,7 @@ import Tattoo from '../Tattoos/Tattoo'
 import TattooCreate from '../Tattoos/TattooCreate'
 import TattooEdit from '../Tattoos/TattooEdit'
 import MyTattoos from '../Tattoos/MyTattoos'
+import About from '../About'
 
 class App extends Component {
   constructor () {
@@ -78,6 +79,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} exact path='/tattoos/:id/edit' render={() => (
             <TattooEdit alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/about' render={() => (
+            <About alert={this.alert} user={user} />
           )} />
         </main>
       </Fragment>

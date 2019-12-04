@@ -85,6 +85,10 @@ body {
   justify-content: center;
 }
 
+.nickainley {
+  font-family: Nickainley;
+}
+
 .options {
   padding: 30px;
 }
@@ -99,6 +103,11 @@ body {
   font-weight: 400;
   justify-content: center;
   margin: 20px;
+}
+
+.profile-buttons {
+  display: flex;
+  float: right;
 }
 
 .slogan {
@@ -142,6 +151,36 @@ body {
   clear: both;
   display: block;
   width: 100%;
+}
+
+.tattoo-full {
+  align-items: center;
+  background: #F23D4C;
+  border: 5px solid #F29191;
+  border-radius: 15px;
+  color: #260108;
+  font-family: house-script, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  justify-content: center;
+  margin: 10px;
+  width: 75%;
+}
+
+.tattoo-teaser {
+  align-items: center;
+  background: #F23D4C;
+  border: 5px solid #F29191;
+  border-radius: 15px;
+  color: #260108;
+  font-family: house-script, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  justify-content: center;
+  margin: 10px;
+  width: 75%;
 }
 
 .title {
