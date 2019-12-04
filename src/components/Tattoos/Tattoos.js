@@ -35,9 +35,6 @@ const Tattoos = props => {
   return (
     <div className='row'>
       <div className='col'>
-        <div>
-          <h1>Tattoos:</h1>
-        </div>
         <ListGroup>
           {tattoosJsx}
         </ListGroup>

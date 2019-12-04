@@ -24,11 +24,12 @@ const Tattoos = props => {
 
   const tattoosJsx = tattoos.map(tattoo => (
     <ListGroup.Item
-      key={tattoo._id}
+      key={tattoo.id}
       action
-      href={`#tattoos/${tattoo._id}`}
+      href={`#tattoos/${tattoo.id}`}
     >
       {tattoo.title}
+      {tattoo.picture}
     </ListGroup.Item>
   ))
 
