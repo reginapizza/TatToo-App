@@ -1,6 +1,6 @@
 {
-  "name": "TatToo-React-Client",
-  "homepage": "https://reginapizza.github.io/TatToo-React-Client",
+  "name": "TatToo-App",
+  "homepage": "https://reginapizza.github.io/TatToo-App",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
