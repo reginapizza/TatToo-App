@@ -83,8 +83,8 @@ const Tattoo = props => {
         </div>
         <div className="col-6">
           {tattoo.picture
-            ? <img src={tattoo.picture} alt={'Tattoo of ' + tattoo.title} height="300" width="300"></img>
-            : <img src="../../public/204nocontent.png" height="300" width="300"></img>
+            ? <img src={tattoo.picture} alt={'Tattoo of ' + tattoo.title} height="400" width="300"></img>
+            : <img src="no-image-available.png"></img>
           }
         </div>
       </div>

@@ -16,7 +16,7 @@ const Tattoos = props => {
       }
     })
       .then(response => {
-        setTattoos(response.data.tattoos.reverse())
+        setTattoos(response.data.tattoos)
       })
       .then(() => props.alert({ heading: 'Success', message: 'Here are your tats!', variant: 'success' }))
       .catch(() => props.alert({ heading: 'Oops!', message: 'Sorry, something went wrong...', variant: 'danger' }))
@@ -33,7 +33,10 @@ const Tattoos = props => {
         {tattoo.title}
       </div>
       <div className="row">
-        {<img src={tattoo.picture} alt={'Tattoo of ' + tattoo.title} height="350" width="350"></img>}
+        {tattoo.picture
+          ? <img src={tattoo.picture} alt={'Tattoo of ' + tattoo.title} height="350" width="350"></img>
+          : <img src="no-image-available.png" height="350" width="350"></img>
+        }
       </div>
     </ListGroup.Item>
   ))

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import { Redirect, withRouter } from 'react-router-dom'
 import axios from 'axios'
 
@@ -10,7 +10,13 @@ const TattooEdit = (props) => {
   const [updated, setUpdated] = useState(false)
 
   useEffect(() => {
-    axios(`${apiUrl}/tattoos/${props.match.params.id}`)
+    axios({
+      url: `${apiUrl}/tattoos/${props.match.params.id}`,
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${props.user.token}`
+      }
+    })
       .then(res => setTattoo(res.data.tattoo))
       .catch(console.error)
   }, [])
@@ -45,12 +51,17 @@ const TattooEdit = (props) => {
   }
 
   return (
-    <TattooForm
-      tattoo={tattoo}
-      handleChange={handleChange}
-      handleSubmit={handleSubmit}
-      cancelPath={`#tattoos/${props.match.params.id}`}
-    />
+    <Fragment>
+      <div>
+        <p className="page-headers">Edit Your Tattoo</p>
+      </div>
+      <TattooForm
+        tattoo={tattoo}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        cancelPath={`#tattoos/${props.match.params.id}`}
+      />
+    </Fragment>
   )
 }
 

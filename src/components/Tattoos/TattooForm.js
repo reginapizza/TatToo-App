@@ -20,7 +20,7 @@ const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
       <input
         className="form"
         id="author"
-        placeholder="Input hpyerlink to an image of your tattoo"
+        placeholder="Input hyperlink to an image of your tattoo"
         value={tattoo.picture}
         name="picture"
         onChange={handleChange}
@@ -44,7 +44,7 @@ const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
         className="form"
         id="day"
         placeholder="YYYY-MM-DD"
-        value={tattoo.day}
+        value={tattoo.day || ''}
         name="day"
         onChange={handleChange}
       />
@@ -94,7 +94,7 @@ const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
       />
     </div>
 
-    <button className="submit-button" type="submit">Create my tattoo!</button>
+    <button className="submit-button" type="submit">Submit</button>
     <Link to={cancelPath}>
       <button className="submit-button">Cancel</button>
     </Link>

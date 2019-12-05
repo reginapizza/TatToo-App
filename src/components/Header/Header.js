@@ -8,19 +8,19 @@ import { mdiAccount, mdiPlus, mdiLogout, mdiHelp, mdiHome } from '@mdi/js'
 const authenticatedOptions = (
   <Fragment className="options">
     <Nav.Link href="#tattoos"><Icon path={mdiHome} title="Home"
-      size={2}
+      size={1.5}
       color="white"/></Nav.Link>
     <Nav.Link href="#create-tattoo"><Icon path={mdiPlus} title="Add A Tattoo"
-      size={2}
+      size={1.5}
       color="white"/></Nav.Link>
     <Nav.Link href="#my-tattoos"><Icon path={mdiAccount} title="User Profile"
-      size={2}
+      size={1.5}
       color="white"/></Nav.Link>
     <Nav.Link href="#about"><Icon path={mdiHelp} title="About"
-      size={2}
+      size={1.5}
       color="white"/></Nav.Link>
     <Nav.Link href="#sign-out"><Icon path={mdiLogout} title="Sign Out"
-      size={2}
+      size={1.5}
       color="white"/></Nav.Link>
   </Fragment>
 )
@@ -35,7 +35,7 @@ const unauthenticatedOptions = (
 const Header = ({ user }) => {
   if (user) {
     return (
-      <Navbar className= "navbar" bg="primary" variant="dark" expand="md">
+      <Navbar sticky="top" className= "navbar" bg="primary" variant="dark" expand="md">
         <Navbar.Brand className="navtitle" href="#tattoos">
           Tat, Too
         </Navbar.Brand>
