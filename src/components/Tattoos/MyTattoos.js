@@ -18,7 +18,6 @@ const Tattoos = props => {
       .then(response => {
         setTattoos(response.data.tattoos)
       })
-      .then(() => props.alert({ heading: 'Success', message: 'Here are your tats!', variant: 'success' }))
       .catch(() => props.alert({ heading: 'Oops!', message: 'Sorry, something went wrong...', variant: 'danger' }))
   }, [])
 
@@ -29,32 +28,37 @@ const Tattoos = props => {
       href={`#tattoos/${tattoo.id}`}
       className="container-fluid tattoo-teaser"
     >
-      <div className="row">
+      <div className="row center">
         {tattoo.title}
       </div>
       <div className="row">
         {tattoo.picture
-          ? <img src={tattoo.picture} alt={'Tattoo of ' + tattoo.title} height="350" width="350"></img>
-          : <img src="no-image-available.png" height="350" width="350"></img>
+          ? <img src={tattoo.picture} alt={'Tattoo of ' + tattoo.title} className="tattoo-image"></img>
+          : <img src="no-image-available.png" className="tattoo-image"></img>
         }
       </div>
     </ListGroup.Item>
   ))
 
   return (
-    <div className='row'>
-      <div className='col'>
-        <div>
-          <div className="page-headers">
-            <p> My Tattoos</p>
-            <span className="profile-buttons">{props.user && <Button href="/create-tattoo">Add your own tattoo!</Button>}
-              <Button href="#change-password">Change Password</Button>
-            </span>
-          </div>
+    <div className="container-fluid">
+      <div className="row">
+        <div className="page-headers col-12">
+          <p> My Tattoos</p>
         </div>
-        <ListGroup>
-          {tattoosJsx}
-        </ListGroup>
+      </div>
+      <div className="row">
+        <div className="profile-buttons col-12 center">
+          {props.user && <Button href="#create-tattoo" className="submit-button">Add your own tattoo!</Button>}
+          <Button href="#change-password" className="submit-button">Change Password</Button>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-md-6 col-sm-12">
+          <ListGroup>
+            {tattoosJsx}
+          </ListGroup>
+        </div>
       </div>
     </div>
   )

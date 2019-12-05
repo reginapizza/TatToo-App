@@ -17,7 +17,6 @@ const Tattoos = props => {
       .then(response => {
         setTattoos(response.data.tattoos.reverse())
       })
-      .then(() => props.alert({ heading: 'Success', message: 'Here are your tats!', variant: 'success' }))
       .catch(() => props.alert({ heading: 'Oops!', message: 'Sorry, something went wrong...', variant: 'danger' }))
   }, [])
 
@@ -28,7 +27,7 @@ const Tattoos = props => {
       href={`#tattoos/${tattoo.id}`}
       className="container-fluid tattoo-teaser"
     >
-      <div className="row">
+      <div className="row center">
         {tattoo.title}
       </div>
       <div className="row">

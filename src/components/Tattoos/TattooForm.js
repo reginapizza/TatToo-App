@@ -5,6 +5,8 @@ const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
   <form className="tattoo-form" onSubmit={handleSubmit}>
     <div>
       <label htmlFor="title">Title</label>
+    </div>
+    <div>
       <input
         className="form"
         id="title"
@@ -17,6 +19,8 @@ const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
 
     <div>
       <label htmlFor="picture">Picture Link:</label>
+    </div>
+    <div>
       <input
         className="form"
         id="author"
@@ -29,6 +33,8 @@ const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
 
     <div>
       <label htmlFor="description">Description:</label>
+    </div>
+    <div>
       <input
         className="form"
         id="description"
@@ -40,6 +46,8 @@ const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
 
     <div>
       <label htmlFor="day">Date:</label>
+    </div>
+    <div>
       <input
         className="form"
         id="day"
@@ -52,6 +60,8 @@ const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
 
     <div>
       <label htmlFor="artist_name">Artist Name:</label>
+    </div>
+    <div>
       <input
         className="form"
         id="artist_name"
@@ -63,6 +73,8 @@ const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
 
     <div>
       <label htmlFor="artist_instagram">Artist Instagram Handle:</label>
+    </div>
+    <div>
       <input
         className="form"
         id="artist_instagram"
@@ -74,6 +86,8 @@ const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
 
     <div>
       <label htmlFor="location">Tattoo Shop:</label>
+    </div>
+    <div>
       <input
         className="form"
         id="artist_instagram"
@@ -85,6 +99,8 @@ const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
 
     <div>
       <label htmlFor="location">Ink Brand:</label>
+    </div>
+    <div>
       <input
         className="form"
         id="ink_brand"

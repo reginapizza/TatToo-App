@@ -27,12 +27,7 @@ class ChangePassword extends Component {
     const { alert, history, user } = this.props
 
     changePassword(this.state, user)
-      .then(() => alert({
-        heading: 'Change Password Success',
-        message: messages.changePasswordSuccess,
-        variant: 'success'
-      }))
-      .then(() => history.push('/'))
+      .then(() => history.push('/my-tattoos'))
       .catch(error => {
         console.error(error)
         this.setState({ oldPassword: '', newPassword: '' })
@@ -83,6 +78,7 @@ class ChangePassword extends Component {
             >
               Submit
             </Button>
+            <Button href="#my-tattoos" className="submit-button">Back</Button>
           </Form>
         </div>
       </div>

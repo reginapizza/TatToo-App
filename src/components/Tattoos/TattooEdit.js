@@ -21,8 +21,6 @@ const TattooEdit = (props) => {
       .catch(console.error)
   }, [])
 
-  console.log(props)
-
   const handleChange = event => {
     event.persist()
     setTattoo(tattoo => ({ ...tattoo, [event.target.name]: event.target.value }))
@@ -40,7 +38,6 @@ const TattooEdit = (props) => {
       data: { tattoo }
     })
       .then(response => {
-        props.alert({ heading: 'Success', message: 'You updated your tattoo!', variant: 'success' })
         setUpdated(true)
       })
       .catch(() => props.alert({ heading: 'Oops!', message: 'Sorry, something went wrong...', variant: 'danger' }))

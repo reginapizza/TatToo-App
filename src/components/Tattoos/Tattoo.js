@@ -19,7 +19,6 @@ const Tattoo = props => {
       }
     })
       .then(response => setTattoo(response.data.tattoo))
-      .then(() => props.alert({ heading: 'Success!', message: 'You got the tat!', variant: 'success' })) // probaby get rid of this once it's working
       .catch(console.error)
   }, [])
 
@@ -62,7 +61,7 @@ const Tattoo = props => {
     <div className="tattoo-full">
       <div className="row">
         <div className="col-6">
-          <h2>{tattoo.title}</h2>
+          <h2 className="center">{tattoo.title}</h2>
           {tattoo.description
             ? <p>{tattoo.description}</p>
             : <p>No description given for this tattoo.</p>
@@ -83,8 +82,8 @@ const Tattoo = props => {
         </div>
         <div className="col-6">
           {tattoo.picture
-            ? <img src={tattoo.picture} alt={'Tattoo of ' + tattoo.title} height="400" width="300"></img>
-            : <img src="no-image-available.png"></img>
+            ? <img src={tattoo.picture} alt={'Tattoo of ' + tattoo.title} className="tattoo-image"></img>
+            : <img src="no-image-available.png" className="tattoo-image"></img>
           }
         </div>
       </div>

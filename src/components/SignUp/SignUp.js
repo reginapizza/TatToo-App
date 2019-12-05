@@ -30,11 +30,6 @@ class SignUp extends Component {
     signUp(this.state)
       .then(() => signIn(this.state))
       .then(res => setUser(res.data.user))
-      .then(() => alert({
-        heading: 'Sign Up Success',
-        message: messages.signUpSuccess,
-        variant: 'success'
-      }))
       .then(() => history.push({
         pathname: '/tattoos',
         state: {}
@@ -101,6 +96,7 @@ class SignUp extends Component {
             >
               Submit
             </Button>
+            <Button href="#/" className="submit-button">Back</Button>
           </Form>
         </div>
       </div>

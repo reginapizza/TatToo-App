@@ -25,8 +25,6 @@ const TattooCreate = props => {
       data: { tattoo }
     })
       .then(response => {
-        console.log(response)
-        props.alert({ heading: 'Success', message: 'You added your tattoo!', variant: 'success' })
         props.history.push(`/tattoos/${response.data.tattoo.id}`)
       })
       .catch(console.error)

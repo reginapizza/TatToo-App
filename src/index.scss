@@ -47,6 +47,11 @@ body {
   justify-content: center;
 }
 
+.description {
+  color: #F29191;
+  font-family: sans-serif;
+}
+
 .form {
   background: #513339;
   color: #F29191;
@@ -60,7 +65,8 @@ body {
   background-color: white;
 }
 
-.list-group {
+.list-group,
+.center {
     align-items: center;
     justify-content: center;
 }
@@ -88,10 +94,6 @@ body {
   float: right;
   font-size: 70px;
   justify-content: center;
-}
-
-.nickainley {
-  font-family: Nickainley;
 }
 
 .options {
@@ -180,6 +182,10 @@ body {
   justify-content: center;
   margin: 10px;
   width: 75%;
+  &:hover {
+    background: #F29191;
+    border: 5px solid #F23D4C;
+  }
 }
 
 .tattoo-teaser {
@@ -195,6 +201,10 @@ body {
   justify-content: center;
   margin: 10px;
   width: 75%;
+  &:hover {
+    background: #F29191;
+    border: 5px solid #F23D4C;
+  }
 }
 
 .title {
