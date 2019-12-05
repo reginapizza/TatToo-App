@@ -44,6 +44,7 @@ class App extends Component {
         {alerts.map((alert, index) => (
           <AutoDismissAlert
             key={index}
+            className="alert alert-body"
             heading={alert.heading}
             variant={alert.variant}
             message={alert.message}
