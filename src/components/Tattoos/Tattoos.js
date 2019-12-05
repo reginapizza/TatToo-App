@@ -33,8 +33,8 @@ const Tattoos = props => {
       </div>
       <div className="row">
         {tattoo.picture
-          ? <img src={tattoo.picture} alt={'Tattoo of ' + tattoo.title} height="350" width="350"></img>
-          : <img src="no-image-available.png" height="350" width="350"></img>
+          ? <img src={tattoo.picture} alt={'Tattoo of ' + tattoo.title} className="tattoo-image"></img>
+          : <img src="no-image-available.png" className="tattoo-image"></img>
         }
       </div>
     </ListGroup.Item>

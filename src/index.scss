@@ -60,6 +60,11 @@ body {
   background-color: white;
 }
 
+.list-group {
+    align-items: center;
+    justify-content: center;
+}
+
 .navbar {
   background-color: #8C0327 !important;
   border: 5px solid #F23D4C;
@@ -113,6 +118,7 @@ body {
 .slogan {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .sign-in,
@@ -153,6 +159,14 @@ body {
   width: 100%;
 }
 
+.tattoo-image {
+  height: auto;
+  margin: 0 auto;
+  max-height: 350px;
+  max-width: 100%;
+  width: auto;
+}
+
 .tattoo-full {
   align-items: center;
   background: #F23D4C;
@@ -172,7 +186,7 @@ body {
   align-items: center;
   background: #F23D4C;
   border: 5px solid #F29191;
-  border-radius: 15px;
+  border-radius: 15px !important;
   color: #260108;
   font-family: house-script, sans-serif;
   font-size: 40px;
@@ -186,4 +200,6 @@ body {
 .title {
   display: flex;
   justify-content: center;
+  width: 100%;
+  margin-top: 40px;
 }

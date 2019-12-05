@@ -3,11 +3,11 @@ import { Button } from 'react-bootstrap'
 
 const LandingPage = () => (
   <div className="landing-page container-fluid">
-    <div className="title">
-      <img src="TatToo.gif" alt="Tat, Too"/>
+    <div>
+      <img src="TatToo.gif" alt="Tat, Too" className="title"/>
     </div>
-    <div className="slogan">
-      <img src="slogan.gif" alt="Your Personal Tattoo Gallery"/>
+    <div>
+      <img src="slogan.gif" alt="Your Personal Tattoo Gallery" className="slogan"/>
     </div>
     <div className="row">
       <div className="col-12 auth">
