@@ -47,11 +47,11 @@ const Tattoo = props => {
 
   const renderArtistTag = () => {
     if (tattoo.artist_name && tattoo.artist_instagram) {
-      return <p>Artist Name: <a href={tattoo.artist_instagram} target="blank">{tattoo.artist_name}</a></p>
+      return <p>Artist Name: <a href={'https://www.instagram.com/' + tattoo.artist_instagram} target="blank">{tattoo.artist_name}</a></p>
     } else if (tattoo.artist_name) {
       return <p>Artist Name: {tattoo.artist_name}</p>
     } else if (tattoo.artist_instagram) {
-      return <p>Artist Instagram Handle: <a href={tattoo.artist_instagram} target="blank">{tattoo.artist_instagram}</a></p>
+      return <p>Artist Instagram Handle: <a href={'https://www.instagram.com/' + tattoo.artist_instagram} target="blank">{tattoo.artist_instagram}</a></p>
     } else if (!tattoo.artist_name && !tattoo.artist_instagram) {
       return <p>Artist: N/A</p>
     }
