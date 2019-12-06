@@ -54,7 +54,7 @@ const Tattoos = props => {
         </div>
       </div>
       <div className="row">
-        <div className="col-md-6 col-sm-12">
+        <div className="col-12">
           <ListGroup>
             {tattoosJsx}
           </ListGroup>

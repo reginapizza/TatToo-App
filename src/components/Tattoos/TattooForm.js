@@ -32,19 +32,6 @@ const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
     </div>
 
     <div>
-      <label htmlFor="description">Description:</label>
-    </div>
-    <div>
-      <input
-        className="form"
-        id="description"
-        value={tattoo.description}
-        name="description"
-        onChange={handleChange}
-      />
-    </div>
-
-    <div>
       <label htmlFor="day">Date:</label>
     </div>
     <div>
@@ -98,7 +85,7 @@ const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
     </div>
 
     <div>
-      <label htmlFor="location">Ink Brand:</label>
+      <label htmlFor="ink_brand">Ink Brand:</label>
     </div>
     <div>
       <input
@@ -106,6 +93,19 @@ const TattooForm = ({ tattoo, handleSubmit, handleChange, cancelPath }) => (
         id="ink_brand"
         value={tattoo.ink_brand}
         name="ink_brand"
+        onChange={handleChange}
+      />
+    </div>
+
+    <div>
+      <label htmlFor="description">Description:</label>
+    </div>
+    <div>
+      <textarea
+        className="form"
+        id="description"
+        value={tattoo.description}
+        name="description"
         onChange={handleChange}
       />
     </div>

@@ -9,6 +9,12 @@
 * [My API repository on Github](https://github.com/reginapizza/TatToo-Backend)
 * [My API hosted on Heroku](https://morning-earth-83765.herokuapp.com/)
 
+### **Setup Steps:**
+1. Fork and clone this repository.
+2. Run npm install to install all dependencies
+3. Additionally, run `npm install react-icons` to install npm package for icons in the navigation bar.
+4. Use `npm run start` to start the the client on your local host.
+
 ### **Technologies Used (Backend):**
 * Ruby
 * Rails
@@ -68,9 +74,11 @@ Some other issues included resizing my images to be responsive to the page size.
 
 
 ### **Original Wireframe Sketch:**
-
+Original Wireframe drawing for Landing Page:
 ![Original Wireframe drawing for landing page](https://i.imgur.com/tGA2bye.png)
+Original Wireframe Drawing for Authenticated Content-Viewing:
 ![Original Wireframe drawing for authenticated content-viewing](https://i.imgur.com/biuMUpd.png)
-
+Final Landing Page Screenshot:
 ![Final Landing Page Screenshot](https://i.imgur.com/AUuKHrk.png)
+Final Home Page Screenshot:
 ![Final Home Page](https://i.imgur.com/oguWMFb.png)

@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 @import url("https://use.typekit.net/kot8atv.css");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 @font-face {
   font-family: 'Nickainley';
   src: local('Nickainley'), url(./Fonts/Nickainley.ttf) format('truetype');
@@ -49,16 +50,26 @@ body {
 
 .description {
   color: #F29191;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .form {
   background: #513339;
   color: #F29191;
-  font-family: house-script, sans-serif;
-  font-size: 30px;
-  font-style: normal;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
   font-weight: 400;
+  line-height: 1.5;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .icons {
@@ -115,6 +126,7 @@ body {
 .profile-buttons {
   display: flex;
   float: right;
+  margin: 10px;
 }
 
 .slogan {
@@ -142,7 +154,7 @@ body {
   font-size: 25px;
   font-style: normal;
   font-weight: 400;
-  margin: 20px 0px;
+  margin: 20px 2px;
   &:hover {
     background-color: #F29191;
     border: 2px solid #F23D4C;
@@ -182,10 +194,6 @@ body {
   justify-content: center;
   margin: 10px;
   width: 75%;
-  &:hover {
-    background: #F29191;
-    border: 5px solid #F23D4C;
-  }
 }
 
 .tattoo-teaser {

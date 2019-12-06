@@ -8,7 +8,6 @@ import apiUrl from '../../apiConfig'
 const Tattoo = props => {
   const [tattoo, setTattoo] = useState(null)
   const userId = props.user.id
-  console.log(props)
 
   useEffect(() => {
     axios({
@@ -21,8 +20,6 @@ const Tattoo = props => {
       .then(response => setTattoo(response.data.tattoo))
       .catch(console.error)
   }, [])
-
-  console.log(tattoo)
 
   const handleDelete = event => {
     axios({
@@ -58,7 +55,7 @@ const Tattoo = props => {
   }
 
   return (
-    <div className="tattoo-full">
+    <div className="tattoo-full container">
       <div className="row">
         <div className="col-6">
           <h2 className="center">{tattoo.title}</h2>
@@ -80,7 +77,7 @@ const Tattoo = props => {
             : <p>Ink Brand: N/A</p>
           }
         </div>
-        <div className="col-6">
+        <div className="col-6 center">
           {tattoo.picture
             ? <img src={tattoo.picture} alt={'Tattoo of ' + tattoo.title} className="tattoo-image"></img>
             : <img src="no-image-available.png" className="tattoo-image"></img>
