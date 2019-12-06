@@ -39,7 +39,11 @@ const About = (props) => (
       <br />
       <h5>Don&apos;t see my image!</h5>
       <ul>
-        <li>Make sure you are linking to the <strong>image address</strong> and not the link to the page it&aposs on. The url should have the file type at the end of it, such as .jpeg, .png, etc... Please see step #3 under &quot;Adding a Tattoo&quot; if you run into issues.  </li>
+        <li>Make sure you are linking to the <strong>image address</strong> and not the link to the page it&apos;s on. The url should have the file type at the end of it, such as .jpeg, .png, etc... Please see step #3 under &quot;Adding a Tattoo&quot; if you run into issues.  </li>
+      </ul>
+      <h5>Can&apo;t get my artist&apos;s instagram handle to link!</h5>
+      <ul>
+        <li>Make sure you are typing in ONLY to artist&apos;s <strong>handle</strong> (AKA username) and <strong>not the whole url address</strong>. That work is done for you! Please see step #7 under &quot;Adding a Tattoo&quot; if you run into issues.</li>
       </ul>
     </div>
   </Fragment>
